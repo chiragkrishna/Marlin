@@ -1,5 +1,3 @@
-@echo off
-
 echo Building marlin for Ender 3
 git checkout "Ender-3(2.0.x)"
 git pull
