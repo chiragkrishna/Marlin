@@ -2227,6 +2227,9 @@ static_assert(hbm[Z_AXIS] >= 0, "HOMING_BUMP_MM.Z must be greater than or equal 
   + ENABLED(OLED_PANEL_TINYBOY2) \
   + ENABLED(MKS_12864OLED) \
   + ENABLED(MKS_12864OLED_SSD1306) \
+  + ENABLED(ZONESTAR_12864LCD) \
+  + ENABLED(ZONESTAR_12864OLED) \
+  + ENABLED(ZONESTAR_12864OLED_SSD1306) \
   + ENABLED(U8GLIB_SH1106_EINSTART) \
   + ENABLED(OVERLORD_OLED) \
   + ENABLED(FYSETC_242_OLED_12864) \
@@ -2242,7 +2245,7 @@ static_assert(hbm[Z_AXIS] >= 0, "HOMING_BUMP_MM.Z must be greater than or equal 
   + ENABLED(TFT_LVGL_UI_SPI) \
   + ENABLED(ANYCUBIC_LCD_I3MEGA) \
   + ENABLED(ANYCUBIC_LCD_CHIRON)
-  #error "Please select no more than one LCD controller option."
+  #error "Please select only one LCD controller option."
 #endif
 
 #undef IS_RRD_SC
@@ -3078,6 +3081,17 @@ static_assert(   _ARR_TEST(3,0) && _ARR_TEST(3,1) && _ARR_TEST(3,2)
  */
 #if EITHER(ESP3D_WIFISUPPORT, WIFISUPPORT) && DISABLED(ARDUINO_ARCH_ESP32)
   #error "ESP3D_WIFISUPPORT or WIFISUPPORT requires an ESP32 controller."
+#endif
+
+/**
+ * Sanity Check for Password Feature
+ */
+#if ENABLED(PASSWORD_FEATURE)
+  #if NONE(HAS_LCD_MENU, PASSWORD_UNLOCK_GCODE, PASSWORD_CHANGE_GCODE)
+    #error "Without PASSWORD_UNLOCK_GCODE, PASSWORD_CHANGE_GCODE, or a supported LCD there's no way to unlock the printer or set a password."
+  #elif DISABLED(EEPROM_SETTINGS)
+    #warning "PASSWORD_FEATURE settings will be lost on power-off without EEPROM_SETTINGS."
+  #endif
 #endif
 
 // Misc. Cleanup
