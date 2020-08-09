@@ -23,7 +23,7 @@ cp .pio/build/LPC1769/firmware.bin ~/Desktop/Ender5-2.0.x.bin
 git checkout "Ender-5(Bugfix)"
 git pull
 python3.8 buildroot/share/vscode/auto_build.py build
-echo build complete for ender 3-Bugfix
+echo build complete for ender 5-Bugfix
 cp .pio/build/LPC1769/firmware.bin ~/Desktop/Ender5-Bugfix.bin
 
 cls
