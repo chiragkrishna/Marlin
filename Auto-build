@@ -53,7 +53,6 @@ echo "...build complete for ender 3-Bugfix.."
 echo "......................................"
 cp -f .pio/build/LPC1769/firmware.bin ~/Desktop/Ender5-Bugfix.bin
 
-clear
 
 echo firmware ready on desktop
 
