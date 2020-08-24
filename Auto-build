@@ -9,7 +9,7 @@ echo ".................................."
 echo ".................................."
 git checkout "Ender-3(Bugfix)"
 git pull
-timeout 60s python3.8 buildroot/share/vscode/auto_build.py build
+platformio run -e LPC1769
 echo "......................................"
 echo "...build complete for ender 3-Bugfix.."
 echo "......................................"
