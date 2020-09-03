@@ -15,7 +15,6 @@ echo "...build complete for ender 3-2.0.x..."
 echo "......................................"
 cp -f .pio/build/LPC1769/firmware.bin ~/Desktop/Ender3-2.0.x.bin
 
-
 echo firmware ready on desktop
 
 function pause(){
