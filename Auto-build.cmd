@@ -12,7 +12,7 @@ platformio run -e LPC1769
 echo "......................................"
 echo "...build complete for ender 3-2.0.x..."
 echo "......................................"
-copy -f .pio\build\LPC1769\firmware.bin %homepath%\Desktop\Ender3-2.0.x.bin
+copy .pio\build\LPC1769\firmware.bin C:\%homepath%\Desktop\Ender3-2.0.x.bin
 
 git checkout "Ender-3(Bugfix)"
 git pull
@@ -20,7 +20,7 @@ platformio run -e LPC1769
 echo "......................................"
 echo "...build complete for ender 3-Bugfix.."
 echo "......................................"
-copy -f .pio\build\LPC1769\firmware.bin %homepath%\Desktop\Ender3-Bugfix.bin
+copy .pio\build\LPC1769\firmware.bin C:\%homepath%\Desktop\Ender3-Bugfix.bin
 
 echo ""
 echo ""
@@ -42,7 +42,7 @@ platformio run -e LPC1769
 echo "......................................"
 echo "...build complete for ender 5-2.0.x..."
 echo "......................................"
-copy -f .pio\build\LPC1769\firmware.bin %homepath%\Desktop\Ender5-2.0.x.bin
+copy .pio\build\LPC1769\firmware.bin C:\%homepath%\Desktop\Ender5-2.0.x.bin
 
 git checkout "Ender-5(Bugfix)"
 git pull
@@ -50,7 +50,7 @@ platformio run -e LPC1769
 echo "......................................"
 echo "...build complete for ender 3-Bugfix.."
 echo "......................................"
-copy -f .pio\build\LPC1769\firmware.bin %homepath%\Desktop\Ender5-Bugfix.bin
+copy .pio\build\LPC1769\firmware.bin C:\%homepath%\Desktop\Ender5-Bugfix.bin
 
 
 echo firmware ready on desktop
