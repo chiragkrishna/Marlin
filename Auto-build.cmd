@@ -48,7 +48,7 @@ git checkout "Ender-5(Bugfix)"
 git pull
 platformio run -e LPC1769
 echo "......................................"
-echo "...build complete for ender 3-Bugfix.."
+echo "...build complete for ender 5-Bugfix.."
 echo "......................................"
 copy .pio\build\LPC1769\firmware.bin C:\%homepath%\Desktop\Ender5-Bugfix.bin
 
