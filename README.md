@@ -48,5 +48,3 @@ Hero Me Gen 3-Dual 5015
 Setup: Direct Drive
 X carriage hieght mod: X Direction Inverted
 X & Y Belt Tensioner Mods
-
-
